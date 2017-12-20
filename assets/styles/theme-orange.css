@@ -9,7 +9,7 @@
   border-color:#607d8b!important;
 }
 .u-tag {
-background-color: #ffa100;
+  background-color: #ffa100;
 }
 .sidebar-title {
   text-transform: none;
@@ -22,7 +22,21 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .u-card-shadow {
   background-color: rgba(255, 255, 255, 0.0);
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .sidebar-items {
   background-color: rgba(255, 255, 255, 1.0);
+}
+.entry-title {
+  color: #2d3438;
+}
+.cover-title {
+  color: #fff;
+}
+a {
+  color: #ffa100;
+}
+.post-title {
+  color: #2d3438;
 }
