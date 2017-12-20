@@ -58,4 +58,13 @@ hr.header-line {
   margin: 10px auto;
   max-width: 100%;
 }
-rgba(255, 161, 0, 1.0)
+.post-related-title {
+  text-transform: none;
+  color: #2d3438;
+}
+.sidebar-title, .u-border-bottom-dark {
+  border-bottom: 1px solid #ffa100;
+}
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
+  color: #2d3438;
+}
