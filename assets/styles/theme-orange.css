@@ -9,10 +9,10 @@
   border-color:#607d8b!important;
 }
 .u-tag {
-  background-color: #ffa100;
+background-color: #ffa100 !important;
 }
 
 .sidebar-title {
-  text-transform: none;
+  text-transform: none !important;
 }
 
