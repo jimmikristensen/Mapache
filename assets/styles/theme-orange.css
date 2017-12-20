@@ -40,3 +40,19 @@ a {
 .post-title {
   color: #2d3438;
 }
+hr {
+  background: linear-gradient(90deg,#f1f2f1,#ffa100 50%,#f1f2f1);
+  background: -webkit-gradient(linear,left top,right top,color-stop(0,#f1f2f1),color-stop(50%,#ffa100),to(#f1f2f1));
+  background: -webkit-linear-gradient(left,#f1f2f1,#ffa100 50%,#f1f2f1);
+  background: -o-linear-gradient(left,#f1f2f1 0,#ffa100 50%,#f1f2f1);
+  margin: 50px auto;
+}
+hr::before {
+  content: no-close-quote;
+}
+hr.header-line {
+  background: #ffa100;
+  height: 1px;
+  border: none;
+  margin: 10px auto;
+}
