@@ -9,10 +9,20 @@
   border-color:#607d8b!important;
 }
 .u-tag {
-background-color: #ffa100 !important;
+background-color: #ffa100;
 }
-
 .sidebar-title {
-  text-transform: none !important;
+  text-transform: none;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  border-radius:2px;
 }
-
+body, h1, h2, h3, h4, h5, h6 {
+  color: #2d3438;
+}
+.u-card-shadow {
+  background-color: rgba(255, 255, 255, 0.0);
+}
+.sidebar-items {
+  background-color: rgba(255, 255, 255, 1.0);
+}
