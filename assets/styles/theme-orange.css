@@ -78,6 +78,7 @@ hr.header-line {
   margin-right: 10px;
 }
 .btn-subscribe-home::before {
-  content: "\F099";
+  /*content: "\F099";  */
   font-family: FontAwesome !important;
+  margin-right: 6px;
 }
