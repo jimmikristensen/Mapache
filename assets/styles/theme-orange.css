@@ -68,3 +68,11 @@ hr.header-line {
 .sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
   color: #2d3438;
 }
+.btn-panel-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.btn-extras-home {
+  margin: 50px 10px 0 10px;
+}
