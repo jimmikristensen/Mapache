@@ -1,6 +1,12 @@
 $(function() {
-  for (var i = 0; i < 2; i++) {
-    console.log('TEST', i);
-    console.log('VAR', extraButtons);
-  }
+  $(extraButtons).each(function(i, v) {
+    console.log('NODE', i, v);
+    $("cover-wrap-content").append(
+      $("<a>", {
+        class: "btn-subscribe-home animated bounceIn",
+        id: "extra-btn-"+i,
+        text: v.name
+      })
+    );
+  });
 });
