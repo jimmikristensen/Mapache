@@ -9,7 +9,8 @@ $(function() {
     });
     console.log('LINK', link);
     if (v.icon) {
-      document.styleSheets[0].addRule(link.id+'::before','content: "'+v.icon+'";');
+      document.styleSheets[0].insertRule("#extra-btn-"+i+"::before {content: "+v.icon+"}");
+      document.styleSheets[0].insertRule("#test-btn-"+i+"::before {content: "+v.icon+"}");
     }
     if (v.target) {
       link.attr("target", v.target);
