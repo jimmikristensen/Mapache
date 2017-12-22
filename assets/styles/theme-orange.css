@@ -73,6 +73,11 @@ hr.header-line {
   width: 100%;
   align-items: center;
 }
-.btn-extras-home {
-  margin: 50px 10px 0 10px;
+.btn-subscribe-home {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn-subscribe-home::before {
+  content: "\F099";
+  font-family: FontAwesome !important;
 }
