@@ -4,6 +4,7 @@ $(function() {
     $("<a>", {
       class: "btn-subscribe-home animated bounceIn",
       id: "extra-btn-"+i,
+      href: v.url,
       text: v.name
     }).appendTo("#cover-wrap-content");
   });
