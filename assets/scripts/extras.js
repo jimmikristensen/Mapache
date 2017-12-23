@@ -1,6 +1,5 @@
 $(function() {
   $(extraButtons).each(function(i, v) {
-    console.log('NODE', i, v);
     var link = $("<a>", {
       class: "btn-subscribe-home animated bounceIn",
       id: "extra-btn-"+i,
