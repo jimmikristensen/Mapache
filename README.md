@@ -44,7 +44,7 @@ Raccoon supports the following web [browsers](http://caniuse.com/#search=flexbox
 
 ![](./documentation/img-api.png)
 
-## Mapache settings
+## Raccoon settings
 
 ### Social Links
 
@@ -87,9 +87,23 @@ var homeTitle = '... your title ...';
 ignore homeTitle and add this code */
 var homeTitleTyped = ['YOUR TITLE 1', 'YOUR TITLE 2', 'YOUR TITLE 3', 'YOUR TITLE 4'];
 
-/* 03. Home BTN <SUBSCRIBE> */
-var homeBtnTitle = 'Name BTN';
-var homeBtnURL = 'https://...';
+/* 03. Home screen buttons */
+var extraButtons = [
+    {
+    	name: 'Repositories',        /* Link text */
+        url: 'https://github.com/jimmikristensen?tab=repositories', /* Link */
+        class: 'github-content', /* optional - class used to set content icon */
+        target: '_blank',        /* optional - link target*/
+        title: 'My Repositories' /* optional - link title */
+    },
+    {
+    	name: 'Meetups',    
+        url: 'https://www.meetup.com/FLUG-Fyns-Linux-User-Group/', 
+        class: 'meetup-content', 
+        target: '_blank',        
+        title: 'FLUG Meetups'    
+    }
+];
 
 /* 04. Youtube button subscribe for Video Post Format */
 var youtubeChannelName = 'YOUR_CHANNEL_NAME';
@@ -133,9 +147,11 @@ This enables comments and comment counter
 
 ## Change Theme Style
 
-To change the color of the Mapache theme select one of the theme styles below and copy it into the Setting -> Code Injection -> Blog Header
+To change the color of the Raccoon theme select one of the theme styles below and copy it into the Setting -> Code Injection -> Blog Header
 
 ```html
+<!-- Theme orange -->
+<link rel="stylesheet" href="/assets/styles/theme-orange.css"/>
 <!-- Theme indigo -->
 <link rel="stylesheet" href="/assets/styles/theme-indigo.css"/>
 <!-- Theme dark blue -->
@@ -173,7 +189,7 @@ To change the color of the Mapache theme select one of the theme styles below an
 
 ### Add additional content to the sidebar
 
-Add you own custom content into the side bar by editing the `./partials/sidebar.hbs` file.
+Add your own custom content into the side bar by editing the `./partials/sidebar.hbs` file.
 
 ```html
 <!-- Add your content to the bottom -->
