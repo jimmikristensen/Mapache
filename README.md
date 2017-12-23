@@ -88,7 +88,7 @@ ignore homeTitle and add this code */
 var homeTitleTyped = ['YOUR TITLE 1', 'YOUR TITLE 2', 'YOUR TITLE 3', 'YOUR TITLE 4'];
 
 /* 03. Home screen buttons */
-var extraButtons = [
+var homeScreenButtons = [
     {
     	name: 'Repositories',        /* Link text */
         url: 'https://github.com/jimmikristensen?tab=repositories', /* Link */
