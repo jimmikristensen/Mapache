@@ -1,5 +1,5 @@
 $(function() {
-  if (homeScreenButtons) {
+  if (typeof homeScreenButtons !== 'undefined') {
     $(homeScreenButtons).each(function (i, v) {
       var link = $("<a>", {
         class: "btn-subscribe-home animated bounceIn",
