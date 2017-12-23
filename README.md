@@ -5,7 +5,8 @@
 
 > Minimalist Material Design and Elegant theme for [Ghost](https://github.com/tryghost/ghost/)
 
-![](./documentation/mapache-screenshot.png)
+![](./documentation/screen1.png)
+![](./documentation/screen2.png)
 
 ## Raccoon Support for Web Browsers
 
@@ -122,6 +123,34 @@ var twitterNumber = 2;
 
 <!-- Disqus Comments Count-->
 <script id="dsq-count-scr" src="//YOUR_DISQUS_SHORTCUT_HERE.disqus.com/count.js" async></script>
+```
+
+### Home Screen Buttons
+
+You can add an array of home screen buttons by adding them to the _homeScreenButtons_ variable.
+
+- name: is the text that will appear on the button.
+- url: is the URL of the link button.
+- class: is the name of the css class that will contain the FontAwesome icon - see below (optional).
+- target: is the link target (optional).
+- title: is the link title (optional).
+
+#### Adding a FontAwesome icon to the Home Screen Buttons
+
+You can use any [FontAwesome](http://fontawesome.io/icons/) fonts as an icon for the Home Screen Buttons by inserting the Unicode for the icon into the _content_ of a css class.
+The name of the css class should be referenced by then _class_ attribute of the Home Screen Button settings above.
+
+- The styling needs to be added to the header section `Settings -> Code Injection  -> Blog Header section`
+
+```html
+<style>
+.github-content::before {
+  content: "\f09b";
+}
+.meetup-content::before {
+  content: "\f2e0";    
+}
+</style>
 ```
 
 ### Facebook Comments
