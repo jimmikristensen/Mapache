@@ -7,10 +7,8 @@ $(function() {
       href: v.url,
       text: v.name
     });
-    console.log('LINK', link);
-    if (v.icon) {
-      document.styleSheets[0].insertRule("#extra-btn-"+i+"::before {content: "+v.icon+"}");
-      document.styleSheets[0].insertRule("#test-btn-"+i+"::before {content: "+v.icon+"}");
+    if (v.class) {
+      link.addClass(v.class);
     }
     if (v.target) {
       link.attr("target", v.target);
