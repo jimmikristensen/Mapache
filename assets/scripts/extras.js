@@ -31,6 +31,8 @@ $(function() {
     var count = 0;
     $.get("https://api.github.com/users/"+githubUsername+"/repos?sort=pushed", function (data) {
       count = $(data).length;
+      console.log('LEN', $(data).length);
+      console.log('LEN2', data.length);
       $(data).each(function (i, v) {
         if (i >= displayNum) {
           return;
