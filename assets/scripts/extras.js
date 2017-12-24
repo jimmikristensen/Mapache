@@ -23,8 +23,19 @@ $(function() {
   if (typeof githubUsername !== 'undefined') {
     $("#github-sidebar-items").removeClass("u-hide");
 
-    $.get("https://api.github.com/users/jimmikristensen/repos?sort=pushed", function (data) {
+    var displayNum = 999999;
+    if (typeof reposToDisplay !== 'undefined' && Number.isInteger(reposToDisplay)) {
+      displayNum = reposToDisplay;
+    }
+
+    var count = 0;
+    $.get("https://api.github.com/users/"+githubUsername+"/repos?sort=pushed", function (data) {
+      count = $(data).length;
       $(data).each(function (i, v) {
+        if (i >= displayNum) {
+          return;
+        }
+
         var div = $('<div>', {
           class: 'sidebar-post',
           id: 'sidebar-post'+i
@@ -52,6 +63,11 @@ $(function() {
         div.appendTo("#github-repo-container");
       });
     }, "json");
+
+    var bottomElement = $('<span>', {
+      text: 'Displaying 12 of '+count+' repos'
+    });
+    bottomElement.appendTo('#widget-github-bottom');
   }
 
 });
