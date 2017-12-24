@@ -23,16 +23,19 @@ $(function() {
   if (typeof githubUsername !== 'undefined') {
     $("#github-sidebar-items").removeClass("u-hide");
 
-    var displayNum = 999999;
-    if (typeof reposToDisplay !== 'undefined' && Number.isInteger(reposToDisplay)) {
-      displayNum = reposToDisplay;
-    }
-
-    var count = 0;
     $.get("https://api.github.com/users/"+githubUsername+"/repos?sort=pushed", function (data) {
-      count = $(data).length;
-      console.log('LEN', $(data).length);
-      console.log('LEN2', data.length);
+      var repoCount = data.length;
+      var displayNum = repoCount;
+      if (typeof reposToDisplay !== 'undefined' && Number.isInteger(reposToDisplay)) {
+        displayNum = reposToDisplay;
+      }
+
+      var displayNumText = displayNum == repoCount ? repoCount : displayNum;
+
+      $('<span>', {
+        text: 'Displaying '+displayNumText+' of '+repoCount+' repos'
+      }).appendTo('#widget-github-bottom');
+
       $(data).each(function (i, v) {
         if (i >= displayNum) {
           return;
@@ -65,11 +68,6 @@ $(function() {
         div.appendTo("#github-repo-container");
       });
     }, "json");
-
-    var bottomElement = $('<span>', {
-      text: 'Displaying 12 of '+count+' repos'
-    });
-    bottomElement.appendTo('#widget-github-bottom');
   }
 
 });
