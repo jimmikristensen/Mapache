@@ -21,16 +21,29 @@ $(function() {
   }
 
   if (typeof githubUsername !== 'undefined') {
-    $("github-sidebar-items").removeClass("u-hide");
+    $("#github-sidebar-items").removeClass("u-hide");
 
     $.get("https://api.github.com/users/jimmikristensen/repos?sort=pushed", function (data) {
       $(data).each(function (i, v) {
-        $('<a>', {
+        var githubLink = $('<a>', {
           class: 'github-repos',
-          href: v.url,
-          text: v.name,
+          href: v.html_url,
           target: '_blank'
-        }).appendTo("#github-repo-container");
+        });
+
+        var span = $('<span>', {
+          class: 'sidebar-post--border',
+          text: i+1
+        });
+
+        var title = $('<h3>', {
+          class: 'sidebar-post--title',
+          text: v.name
+        });
+
+        span.appendTo(githubLink);
+        title.appendTo(githubLink);
+        githubLink.appendTo("#github-repo-container");
       });
     }, "json");
   }
