@@ -20,15 +20,19 @@ $(function() {
     });
   }
 
-  $.get( "https://api.github.com/users/jimmikristensen/repos?sort=pushed", function( data ) {
-    data.each(function(i, v) {
-      $('<a>', {
-        class: 'github-repos',
-        href: v.url,
-        text: v.name,
-        target: '_blank'
-      }).appendTo("#github-repo-container");
-    });
-  }, "json" );
+  if (typeof githubUsername !== 'undefined') {
+    $("github-sidebar-items").removeClass("u-hide");
+
+    $.get("https://api.github.com/users/jimmikristensen/repos?sort=pushed", function (data) {
+      $(data).each(function (i, v) {
+        $('<a>', {
+          class: 'github-repos',
+          href: v.url,
+          text: v.name,
+          target: '_blank'
+        }).appendTo("#github-repo-container");
+      });
+    }, "json");
+  }
 
 });
