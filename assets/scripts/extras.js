@@ -25,8 +25,13 @@ $(function() {
 
     $.get("https://api.github.com/users/jimmikristensen/repos?sort=pushed", function (data) {
       $(data).each(function (i, v) {
+        var div = $('<div>', {
+          class: 'sidebar-post',
+          id: 'sidebar-post'+i
+        });
+
         var githubLink = $('<a>', {
-          class: 'github-repos',
+          class: 'github-repos sidebar-post--link',
           href: v.html_url,
           target: '_blank'
         });
@@ -43,7 +48,8 @@ $(function() {
 
         span.appendTo(githubLink);
         title.appendTo(githubLink);
-        githubLink.appendTo("#github-repo-container");
+        githubLink.appendTo(div);
+        div.appendTo("#github-repo-container");
       });
     }, "json");
   }
