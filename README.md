@@ -119,6 +119,10 @@ var fansPageName = 'YOUR_FANS_PAGE_NAME';
 /* 07. Twitter Widget Settings */
 var twitterUserName = 'YOUR_TWITTER_NAME';
 var twitterNumber = 2;
+
+/* 08. GitHub Widget Settings */
+var githubUsername = 'jimmikristensen';
+var reposToDisplay = 5;
 </script>
 
 <!-- Disqus Comments Count-->
@@ -152,6 +156,10 @@ The name of the css class should be referenced by then _class_ attribute of the 
 }
 </style>
 ```
+
+### GitHub Widget Settings
+
+To display GitHub repositories as a widget on the sidebar, set the _githubUsername_ variable to the GitHub username of which you want to display repos for. The repo list is sorted by latest pushed. To limit the number of repos that are shown, set the _reposToDisplay_ variable to an integer.
 
 ### Facebook Comments
 
