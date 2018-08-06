@@ -9,6 +9,9 @@
 .form-control:focus,.mapache-load-more:hover{
   border-color:#607d8b!important;
 }
+.cover {
+  min-height: 40vh !important;
+}
 .u-tag {
   background-color: #ffa100;
 }
